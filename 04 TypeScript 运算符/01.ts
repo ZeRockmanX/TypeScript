@@ -105,23 +105,23 @@ a %= b
 console.log("a%=b: " + a)
 
 //三元运算符
-var num:number = -2 
-var result5 = num > 0 ? "大于 0" : "小于 0，或等于 0" 
+var num: number = -2
+var result5 = num > 0 ? "大于 0" : "小于 0，或等于 0"
 console.log(result5)
 
 //类型运算符
 //typeof 是一元运算符，返回操作数的数据类型。
-var num = 12 
+var num = 12
 console.log(typeof num);   //输出结果: number
 //instanceof 运算符用于判断对象是否为指定的类型，后面章节我们会具体介绍它。
 
 //其他运算符
 //负号运算符(-)
-var x:number = 4 
-var y = -x; 
-console.log("x 值为: ",x);   // 输出结果 4 
-console.log("y 值为: ",y);   // 输出结果 -4
+var x: number = 4
+var y = -x;
+console.log("x 值为: ", x);   // 输出结果 4 
+console.log("y 值为: ", y);   // 输出结果 -4
 
 //字符串运算符: 连接运算符 (+)
-var msg:string = "RUNOOB"+".COM" 
+var msg: string = "RUNOOB" + ".COM"
 console.log(msg)

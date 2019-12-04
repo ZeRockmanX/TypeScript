@@ -96,23 +96,23 @@ var foo2 = (x: number) => {
 }
 foo2(100)
 //单个参数 () 是可选的：
-var display = x => { 
-    console.log("输出为 "+x) 
-} 
+var display = x => {
+    console.log("输出为 " + x)
+}
 display(12)
 //无参数时可以设置空括
-var disp =()=> { 
-    console.log("Function invoked"); 
-} 
+var disp = () => {
+    console.log("Function invoked");
+}
 disp();
 
 //函数重载
-function disp2(s1:string):void; 
-function disp2(n1:number,s1:string):void; 
- 
-function disp2(x:any,y?:any):void { 
-    console.log(x); 
-    console.log(y); 
-} 
-disp2("abc") 
-disp2(1,"xyz");
+function disp2(s1: string): void;
+function disp2(n1: number, s1: string): void;
+
+function disp2(x: any, y?: any): void {
+    console.log(x);
+    console.log(y);
+}
+disp2("abc")
+disp2(1, "xyz");

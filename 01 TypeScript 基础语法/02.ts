@@ -1,12 +1,12 @@
 //TypeScript 面向对象编程实例：
 
-class Site { 
-    hello : string = "Hello World!"
-    name():void { 
-        console.log("Runoob") 
-   } 
-} 
-var obj = new Site(); 
+class Site {
+    hello: string = "Hello World!"
+    name(): void {
+        console.log("Runoob")
+    }
+}
+var obj = new Site();
 console.log(obj.hello);
 obj.name();
 
