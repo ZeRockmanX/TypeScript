@@ -11,34 +11,34 @@ TypeScript 模块的设计理念是可以更换的组织代码。
 
 //IShape.ts 文件代码：
 /// <reference path = "IShape.ts" /> 
-export interface IShape { 
-   draw(); 
+export interface IShape {
+   draw();
 }
 
 //Circle.ts 文件代码：
-import shape = require("./IShape"); 
-export class Circle implements shape.IShape { 
-   public draw() { 
-      console.log("Cirlce is drawn (external module)"); 
-   } 
+import shape = require("./IShape");
+export class Circle implements shape.IShape {
+   public draw() {
+      console.log("Cirlce is drawn (external module)");
+   }
 }
 
 //Triangle.ts 文件代码：
-import shape = require("./IShape"); 
-export class Triangle implements shape.IShape { 
-   public draw() { 
-      console.log("Triangle is drawn (external module)"); 
-   } 
+import shape = require("./IShape");
+export class Triangle implements shape.IShape {
+   public draw() {
+      console.log("Triangle is drawn (external module)");
+   }
 }
 
 //TestShape.ts 文件代码：
-import shape = require("./IShape"); 
-import circle = require("./Circle"); 
-import triangle = require("./Triangle");  
- 
+import shape = require("./IShape");
+import circle = require("./Circle");
+import triangle = require("./Triangle");
+
 function drawAllShapes(shapeToDraw: shape.IShape) {
-   shapeToDraw.draw(); 
-} 
- 
-drawAllShapes(new circle.Circle()); 
+   shapeToDraw.draw();
+}
+
+drawAllShapes(new circle.Circle());
 drawAllShapes(new triangle.Triangle());
