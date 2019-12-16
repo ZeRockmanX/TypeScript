@@ -1,5 +1,7 @@
-# TypeScript 安装
+# TypeScript 中文文档
 https://www.tslang.cn/docs/home.html
+
+# TypeScript 安装
 
 本文介绍 TypeScript 环境的安装。
 <br/>
