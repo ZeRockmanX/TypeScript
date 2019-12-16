@@ -1,4 +1,5 @@
 # TypeScript 安装
+https://www.tslang.cn/docs/home.html
 
 本文介绍 TypeScript 环境的安装。
 <br/>
