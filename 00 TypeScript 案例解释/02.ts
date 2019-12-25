@@ -53,3 +53,35 @@ someCat.forEach(function (value) {
     value.Age.ageNumber = 2020;// 如果填错会提示
     console.log('==================666');
 });
+
+//===================================================================
+export type PageForDisplay =
+    Partial<{  // Partial表示所有都是可选,类似全部的都加了"?"
+        device: string;
+        memo: string;
+    }>;
+
+var testPageForDisplay: PageForDisplay = {
+    device: "device is string",
+}
+console.log(testPageForDisplay.device);
+
+export interface PatternMatcher<T> {
+    key: keyof T;
+    pattern: string;
+    input: (chars: string) => void;
+    clear: () => void;
+}
+
+var testPatternMatcher: PatternMatcher<PageForDisplay> = {
+    key: "memo",  //因为PatternMatcher的key类型是keyof T，所以只能取<PageForDisplay>中的键名device或memo
+    pattern: "this is pattern",
+    input: (bb: string) => { console.log("this is input bb"); },
+    clear: () => { console.log("this is clear"); return "aa" },
+}
+console.log(testPatternMatcher.key);
+console.log(testPatternMatcher.pattern);
+testPatternMatcher.input("ignore");
+//console.log(testPatternMatcher.input("ignore")); // 如果沒有return值则console.log会输出undefine
+console.log(testPatternMatcher.clear());
+//===================================================================
