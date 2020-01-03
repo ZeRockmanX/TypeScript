@@ -17,34 +17,3 @@ var foo2 = (x: number) => {
     console.log(x)
 }
 foo2(100)
-
-//=========================
-export type PageForDisplay =
-Partial<{  // Partial表示所有都是可选,类似全部的都加了"?"
-        device: string;
-        memo: string;
-    }>;
-
-export interface PatternMatcher<T> {
-        key: keyof T;
-        pattern: string;
-        input: (chars: string) => void;
-        clear: () => void;
-}
-
-function aaa(bb string){
-    
-}
-
-const foo3 = (
-    rows: PageForDisplay[],
-    pathFilter: PatternMatcher<PageForDisplay>,
-): PageForDisplay[] =>
-    rows
-        .filter((row: PageForDisplay) => row.path.match(pathFilter.pattern))
-        .filter((row: PageForDisplay) => {
-            if (deviceFilter.collection.list.length === 0) {
-                return true;
-            }
-            return deviceFilter.collection.list.map(df => df.label).includes(row.device);
-        });
